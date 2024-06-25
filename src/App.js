@@ -11,7 +11,7 @@ function App() {
 
   const handleTap = () => {
     if (points > 0) {
-      setTapCount(tapCount + 1);
+      setTapCount(tapCount + 5);
       setPoints(points - 1);
 
       const newAnimation = { id: Date.now(), value: '+1' };
