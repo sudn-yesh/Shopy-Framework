@@ -36,7 +36,7 @@ function App() {
           <Box className="phone-container" onClick={handleTap}>
             
             {animations.map(animation => (
-              <div className="tap-animation" key={animation.id}>+{2}</div>
+              <div className="tap-animation" key={animation.id}>+{3}</div>
             ))}
             <img src="/shopumbrella.png" alt="Shop Awning" className="shop-awning-image" />
             <div className="phone">
