@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# Notcoin Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains the initial setup and the final version of the Notcoin clone project, including the basic project structure, necessary images, and icons.
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+This project is a clone of the popular Telegram mini app, Notcoin. The repository provides two branches:
 
-### `npm start`
+1. **Initial Setup**: Provides the foundational structure and assets needed to build the full application.
+2. **Final Version**: The completed application with all functionalities.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To get started with either the initial setup or the final version, follow these instructions:
 
-### `npm test`
+### Cloning the Repository
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Clone the Repository**:
 
-### `npm run build`
+    ```bash
+    git clone https://github.com/nikandr-surkov/Notcoin-Telegram-Mini-App-Clone.git
+    cd Notcoin-Telegram-Mini-App-Clone
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Initial Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Switch to the `initial-setup` Branch**:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    git checkout initial-setup
+    ```
 
-### `npm run eject`
+3. **Install Dependencies**:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    ```bash
+    npm install
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Run the Development Server**:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    ```bash
+    npm run dev
+    ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+5. **Open Your Browser**:
 
-## Learn More
+    Navigate to localhost to see the initial setup.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Final Version
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. **Switch to the `final-version` Branch**:
 
-### Code Splitting
+    ```bash
+    git checkout final-version
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. **Install Dependencies**:
 
-### Analyzing the Bundle Size
+    ```bash
+    npm install
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. **Run the Development Server**:
 
-### Making a Progressive Web App
+    ```bash
+    npm run dev
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+5. **Open Your Browser**:
 
-### Advanced Configuration
+    Navigate to localhost to see the final version of the application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Contact
 
-### Deployment
+For any inquiries, please contact me in Telegram: [Nikandr Surkov](https://t.me/nikandr_s).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
