@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './index.css';
 import Arrow from './icons/Arrow';
-import { bear, coin, highVoltage, rocket, trophy, shopylogorbg, shopumbrella } from './images';
-import Frens from './pages/Frens';  // Ensure correct import path
-import Earn from './pages/Earn';
-import Boost from './pages/Boost';
+import { coin, highVoltage, trophy, shopylogorbg, shopumbrella } from './images';
+import Friends from './pages/Boost';
+import Tasks from './pages/Tasks';
+import Statistics from './pages/Statistics';
 
 const App = () => {
   const [points, setPoints] = useState(0);
@@ -49,8 +49,11 @@ const App = () => {
         <div className="w-full z-10 min-h-screen flex flex-col items-center text-white">
           <div className="fixed top-0 left-0 w-full px-4 pt-8 z-10 flex flex-col items-center text-white">
             <div className="w-full cursor-pointer">
-              <div className="bg-[#1f1f1f] text-center py-2 rounded-xl">
-                <p className="text-lg">Join squad <Arrow size={18} className="ml-0 mb-1 inline-block" /></p>
+              <div className="bg-[#1f1f1f] text-center py-2 rounded-xl flex justify-around">
+                <Link to="/">Home</Link>
+                <Link to="/friends">Friends</Link>
+                <Link to="/tasks">Tasks</Link>
+                <Link to="/statistics">Statistics</Link>
               </div>
             </div>
             <div className="mt-12 text-5xl font-bold flex items-center total-coins">
@@ -76,56 +79,40 @@ const App = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex-grow flex items-center max-w-60 text-sm">
-                <div className="w-full bg-[#fad258] py-4 rounded-2xl flex justify-around">
-                  <Link to="/frens" className="flex flex-col items-center gap-1">
-                    <img src={bear} width={24} height={24} alt="Frens" />
-                    <span>Frens</span>
-                  </Link>
-                  <div className="h-[48px] w-[2px] bg-[#fddb6d]"></div>
-                  <Link to="/earn" className="flex flex-col items-center gap-1">
-                    <img src={coin} width={24} height={24} alt="Earn" />
-                    <span>Earn</span>
-                  </Link>
-                  <div className="h-[48px] w-[2px] bg-[#fddb6d]"></div>
-                  <Link to="/boosts" className="flex flex-col items-center gap-1">
-                    <img src={rocket} width={24} height={24} alt="Boosts" />
-                    <span>Boosts</span>
-                  </Link>
-                </div>
-              </div>
             </div>
           </div>
-          <div className='phone'>
-            <img src={shopumbrella} alt="dukan" className='dukan'/>
-            <div className='phone-container'>
-              <div className="flex-grow flex items-center justify-center">
-                <div className="relative mt-4" onClick={handleClick}>
-                  <img src={shopylogorbg} className='shopy-logo' width={256} height={256} alt="notcoin" />
-                  {clicks.map((click) => (
-                    <div
-                      key={click.id}
-                      className="absolute text-5xl font-bold opacity-0 one-plus"
-                      style={{
-                        top: `${click.y - 42}px`,
-                        left: `${click.x - 30}px`,
-                        animation: `float 0.7s ease-out`
-                      }}
-                      onAnimationEnd={() => handleAnimationEnd(click.id)}
-                    >
-                      +1
+          <Routes>
+            <Route path="/" element={
+              <div className='phone'>
+                <img src={shopumbrella} alt="dukan" className='dukan' />
+                <div className='phone-container'>
+                  <div className="flex-grow flex items-center justify-center">
+                    <div className="relative mt-4" onClick={handleClick}>
+                      <img src={shopylogorbg} className='shopy-logo' width={256} height={256} alt="notcoin" />
+                      {clicks.map((click) => (
+                        <div
+                          key={click.id}
+                          className="absolute text-5xl font-bold opacity-0 one-plus"
+                          style={{
+                            top: `${click.y - 42}px`,
+                            left: `${click.x - 30}px`,
+                            animation: `float 0.7s ease-out`
+                          }}
+                          onAnimationEnd={() => handleAnimationEnd(click.id)}
+                        >
+                          +1
+                        </div>
+                      ))}
                     </div>
-                  ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
+            } />
+            <Route path="/friends" element={<Friends />} />
+            <Route path="/tasks" element={<Tasks />} />
+            <Route path="/statistics" element={<Statistics />} />
+          </Routes>
         </div>
-        <Routes>
-          <Route path="/frens" element={<Frens />} />
-          <Route path="/earn" element={<Earn />} />
-          <Route path="/boosts" element={<Boost />} />
-        </Routes>
       </div>
     </Router>
   );
