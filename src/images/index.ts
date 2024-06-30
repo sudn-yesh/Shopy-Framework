@@ -4,7 +4,13 @@ import highVoltage from "./high-voltage.png";
 import shopylogorbg from "./shopylogorbg.png";
 import rocket from "./rocket.png";
 import trophy from "./trophy.png";
-import shopumbrella from "./shopumbrella.png"
+import shopy from "./shopy png.png"
+
+import home from "./home.png"
+import friends from "./friends.png"
+import tasks from "./tasks.png"
+import stats from "./stats.png"
+import boost from "./boost.png"
 
 export {
     bear,
@@ -13,5 +19,10 @@ export {
     shopylogorbg,
     rocket,
     trophy,
-    shopumbrella
+    shopy,
+    home,
+    friends,
+    tasks,
+    stats,
+    boost,
 }

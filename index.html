@@ -3,8 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Shopy Framework</title>
+    <style>
+      html, body {
+        overflow: hidden; /* Disable scrolling */
+        height: 100%; /* Ensure the body takes full height */
+        margin: 0; /* Remove default margin */
+        touch-action: none; /* Prevent touch scrolling */
+      }
+      #root {
+        height: 100%; /* Ensure the root div takes full height */
+      }
+    </style>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        if (window.Telegram?.WebApp) {
+          const tg = window.Telegram.WebApp;
+          tg.expand();
+
+          // Ensure the Mini App remains expanded
+          tg.onEvent('viewportChanged', function() {
+            if (!tg.isExpanded) {
+              tg.expand();
+            }
+          });
+        }
+
+        // Prevent scrolling using JavaScript
+        window.addEventListener('touchmove', function(event) {
+          event.preventDefault();
+        }, { passive: false });
+      });
+    </script>
   </head>
   <body>
     <div id="root"></div>

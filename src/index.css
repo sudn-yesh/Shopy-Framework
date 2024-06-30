@@ -18,7 +18,7 @@ body {
 }
 
 .bg-gradient-main {
-  background: linear-gradient(to top, #252345, #2a2a3b);
+  background: linear-gradient(to top, #299bc4, #000000);
 }
 
 .bg-gradient-overlay {
@@ -83,4 +83,35 @@ body {
 
 .h-4 {
   height: 0.7rem;
+}
+.button-with-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+}
+
+.button-icon-container {
+  background-color: rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 4px;
+}
+
+.button-icon {
+  width: 40px;
+  height: 40px;
+}
+@keyframes tilt-shake {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(-6deg); }
+  40% { transform: rotate(6deg); }
+  60% { transform: rotate(-6deg); }
+  80% { transform: rotate(6deg); }
+}
+
+.tilt-shake {
+  animation: tilt-shake 0.3s ease-out;
 }
