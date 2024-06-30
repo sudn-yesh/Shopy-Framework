@@ -126,3 +126,15 @@ bg-gray-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(51 72 95);
 }
+
+.gohan-better {
+  position: absolute;
+  top: 15%;
+  padding: 50px;
+  border-radius: 20px;
+}
+.goku-better { 
+  margin-top: 12%;
+  padding: 9px;
+  border-radius: 10px;
+}
