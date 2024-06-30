@@ -23,7 +23,7 @@ const App: React.FC = () => {
   const [energy, setEnergy] = useState<number | null>(null);
   const [clicks, setClicks] = useState<{ id: number; x: number; y: number }[]>([]);
   const [isAnimating, setIsAnimating] = useState<boolean>(false);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
+  // const [isLoading, setIsLoading] = useState<boolean>(true);
   const pointsToAdd: number = 1;
   const energyToReduce: number = 1;
 
@@ -73,7 +73,7 @@ const App: React.FC = () => {
     } catch (e) {
       console.error('Error fetching user data: ', e);
     } finally {
-      setIsLoading(false);
+      // setIsLoading(false);
     }
   };
 
@@ -118,9 +118,9 @@ const App: React.FC = () => {
     setClicks(prevClicks => prevClicks.filter(click => click.id !== id));
   };
 
-  if (isLoading || energy === null) {
-    return <div className="flex items-center justify-center h-screen text-sky-500">Loading...</div>;
-  }
+  // if (isLoading || energy === null) {
+  //   return <div className="flex items-center justify-center h-screen text-sky-500">Loading...</div>;
+  // }
 
   return (
     <Router>
